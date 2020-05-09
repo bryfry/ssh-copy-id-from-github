@@ -10,6 +10,7 @@ import logging
 
 from typing import List, Optional
 
+
 class BaseClient:
     def __init__(
         self,
@@ -20,7 +21,7 @@ class BaseClient:
         is_ssl=True,
         timeout=5,
         retries=6,
-        retry_wait=1, 
+        retry_wait=1,
         max_timeout=300,
         max_retry_wait=300,
     ):
@@ -32,9 +33,7 @@ class BaseClient:
         self.retries = retries
         self.retry_wait = retry_wait
         self.scheme = "https" if self.is_ssl else "http"
-        self.url = (
-            f"{self.scheme}://{self.host}:{self.port}{self.path}"
-        )
+        self.url = f"{self.scheme}://{self.host}:{self.port}{self.path}"
         self.logger = logging.getLogger("aiohttp.internal")
         self.max_timeout = max_timeout
         self.max_retry_wait = max_retry_wait

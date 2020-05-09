@@ -6,6 +6,8 @@
 - [ ] Cleanup functions, refactor if defaults are never exposed
 - [ ] Add logging of all actions completed or failed (stderr) 
 - [ ] Add last updated date to the serilization header comment
+- [ ] Document how-to: Install in a venv
+- [ ] Document how-to: Do a non-destructive test run (example usage)
 - [ ] Document how-to: Deployment via systemd periodic task
 - [ ] Document how-to: Deployment via cron job
 - [ ] Document how-to: Install via ansible role
