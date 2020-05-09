@@ -16,4 +16,3 @@
 These didn't meet my imediate design goals but would not be difficult to add:
 
 - Preserve current content of authorized_keys file
-- 
