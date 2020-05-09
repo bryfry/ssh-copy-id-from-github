@@ -25,10 +25,8 @@ class GithubAuthorizedKeyFile(JsonSchemaMixin):
         if isinstance(self.github_users,str):
             self.github_users = [self.github_users]
 
-        print (self.filename)
         if self.filename is None:
             err, self.filename = self.keyfile(user=self.user, write=True)
-        print (self.filename)
 
 
     async def collect_keys(self):
@@ -113,7 +111,6 @@ class GithubAuthorizedKeyFile(JsonSchemaMixin):
         return ''.join(lines)
 
     def writefile(self):
-        print(f"writing to {self.filename}") 
         fd, tmp_path = tempfile.mkstemp('', 'tmp', os.path.dirname(self.filename))
         f = open(tmp_path, "w")
     
