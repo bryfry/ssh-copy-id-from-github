@@ -1,6 +1,6 @@
 import argparse
 import asyncio
-from authorized_key import GithubAuthorizedKeyFile
+from lib.authorized_key import GithubAuthorizedKeyFile
 
 
 def parse_args():

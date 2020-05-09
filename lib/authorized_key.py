@@ -5,7 +5,7 @@ import tempfile
 from typing import Union, List
 from dataclasses import dataclass, field
 from dataclasses_jsonschema import JsonSchemaMixin
-from client import BaseClient
+from lib.client import BaseClient
 
 @dataclass
 class Key(JsonSchemaMixin):
