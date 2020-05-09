@@ -1,5 +1,20 @@
 # `ssh-copy-id-from-github.py`
 
+```
+(venv) $ python3 ssh-copy-id-from-github.py -h
+usage: ssh-copy-id-from-github.py [-h] [-a] [-O | -f FILE] [-u USER] username [username ...]
+
+positional arguments:
+  username              Public key source Github usernames
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a, --annotate        store public key source details in key annotation
+  -O, --to-stdout       write results to standard output
+  -f FILE, --file FILE  store output in FILE
+  -u USER, --user USER  store output for USER
+```
+
 ### TODO
 
 - [ ] Add more docstrings
@@ -18,3 +33,4 @@
 These didn't meet my imediate design goals but would not be difficult to add:
 
 - Preserve current content of authorized_keys file
+- Target remote systems (emulate `ssh-copy-id` functionality or wrap it)
